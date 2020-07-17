@@ -69,7 +69,6 @@ function printQuote() {
   return displayQuote
 }
 
-
 let quote = printQuote()
 
 document.getElementById('quote-box').innerHTML = quote;
