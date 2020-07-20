@@ -47,8 +47,7 @@ const quotes = [
 * RGB function based off the refractor challenge from the Java Loop Lesson.
 ***/
 
-
-function randomRGB(value) {
+function randomRGB() {
   const x = () => Math.floor(Math.random() * 256);
   const color = `rgb(${x()}, ${x()}, ${x()} )`;
   return color;
@@ -72,7 +71,7 @@ getRandomQuote()
 
 function printQuote() {
   getRandomQuote()
-  let displayQuote = `<p class="quote">${randomQuote.quote}`
+  let displayQuote = `<p class="quote">${randomQuote.quote}</p>`
   displayQuote += `<p class="source">${randomQuote.source}`
   if ('citation' in randomQuote) {
     displayQuote += `<span class="citation">${randomQuote.citation}</span>`
