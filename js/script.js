@@ -46,10 +46,11 @@ const quotes = [
 /***
 * RGB function based off the refractor challenge from the Java Loop Lesson.
 ***/
-const randomValue = () => Math.floor(Math.random() * 256);
+
 
 function randomRGB(value) {
-  const color = `rgb(${randomValue()}, ${randomValue()}, ${randomValue()} )`;
+  const x = () => Math.floor(Math.random() * 256);
+  const color = `rgb(${x()}, ${x()}, ${x()} )`;
   return color;
 }
 
@@ -57,10 +58,10 @@ function randomRGB(value) {
  * Function based on random number function used throughout the Unit 1 course
 ***/
 
-
 function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * quotes.length)
-  return randomNumber
+  randomQuote = quotes[randomNumber]
+  return randomQuote
 }
 getRandomQuote()
 
@@ -70,21 +71,21 @@ getRandomQuote()
 ***/
 
 function printQuote() {
-  let randomQuote = getRandomQuote()
-  let displayQuote = `<p class="quote">${quotes[randomQuote].quote}`
-  displayQuote += `<p class="source">${quotes[randomQuote].source}`
-  if ('citation' in quotes[randomQuote]) {
-    displayQuote += `<span class="citation">${quotes[randomQuote].citation}</span>`
+  getRandomQuote()
+  let displayQuote = `<p class="quote">${randomQuote.quote}`
+  displayQuote += `<p class="source">${randomQuote.source}`
+  if ('citation' in randomQuote) {
+    displayQuote += `<span class="citation">${randomQuote.citation}</span>`
   }
-  if ('year' in quotes[randomQuote]) {
-    displayQuote += `<span class="year">${quotes[randomQuote].year}</span>`
+  if ('year' in randomQuote) {
+    displayQuote += `<span class="year">${randomQuote.year}</span>`
   }
-  if ('system' in quotes[randomQuote]) {
-    displayQuote += `<span class="system">, ${quotes[randomQuote].system}</span>`
+  if ('system' in randomQuote) {
+    displayQuote += `<span>, ${randomQuote.system}</span>`
   }
   displayQuote += `</p>`
   document.getElementById('quote-box').innerHTML = displayQuote;
-  document.body.style.background = randomRGB(randomValue)
+  document.body.style.background = randomRGB()
 }
 
 /***
