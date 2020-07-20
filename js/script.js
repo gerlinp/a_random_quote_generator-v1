@@ -3,12 +3,9 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance:
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
 /***
- * `quotes` array
+* 7 quotes provided from the game Final Fantasy VII
+* Besides quote and source split up objects to show a bit of diversity.
 ***/
 const quotes = [
   { quote:"No one lives in the slums because they want to. It's like this train. It can only go where the tracks take it",
@@ -46,7 +43,9 @@ const quotes = [
 ]
 
 
-// RGB function based off the refractor challenge  from the Java Loop Lesson
+/***
+* RGB function based off the refractor challenge from the Java Loop Lesson.
+***/
 const randomValue = () => Math.floor(Math.random() * 256);
 
 function randomRGB(value) {
@@ -55,9 +54,9 @@ function randomRGB(value) {
 }
 
 /***
- * `getRandomQuote` function
+ * Function based on random number function used throughout the Unit 1 course
 ***/
-// based on random number function used throughout the course
+
 
 function getRandomQuote() {
   const randomNumber = Math.floor(Math.random() * quotes.length)
@@ -66,7 +65,8 @@ function getRandomQuote() {
 getRandomQuote()
 
 /***
- * `printQuote` function
+ * Used getRandomQuote function to choose a random quote from quotes array.
+ * Also included if statements to create a string to display in HTML using the assigned classes.
 ***/
 
 function printQuote() {
@@ -88,9 +88,12 @@ function printQuote() {
 }
 
 /***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
+ * Code proivded by project that cannot be changed.
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+/***
+ * Interval timer to run the function printQuote() automatically every 10 seconds
+***/
 setInterval(printQuote,10000);
