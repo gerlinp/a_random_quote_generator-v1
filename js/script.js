@@ -5,7 +5,7 @@ project 1 - A Random Quote Generator
 
 /***
 * 7 quotes provided from the game Final Fantasy VII
-* Besides quote and source split up objects to show a bit of diversity.
+* Besides quote and source split up objects to show a bit of diversity needed for project.
 ***/
 const quotes = [
   { quote:"No one lives in the slums because they want to. It's like this train. It can only go where the tracks take it",
@@ -94,6 +94,6 @@ function printQuote() {
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 
 /***
- * Interval timer to run the function printQuote() automatically every 10 seconds
+ * Interval timer to run the function printQuote() automatically every 10 seconds on its own.
 ***/
 setInterval(printQuote,10000);
