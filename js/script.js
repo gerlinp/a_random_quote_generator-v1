@@ -15,7 +15,8 @@ const quotes = [
 
   { quote:"But you gotta  understand that there ain’t no gettin’ offa this train we on, not till we get to the end of the line.",
   source:"Barret Wallace",
-  year:'1997'},
+  year:'1997',
+  system:'Playstation'},
 
   { quote:"Hey, why don’t we make a promise?  Umm, if you get really famous and I’m ever in a bind…you come save me, alright?",
   source:"Tifa Lockhart",
